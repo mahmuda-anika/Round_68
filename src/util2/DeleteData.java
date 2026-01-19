@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class DeleteData {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-        System.out.println("Enter your id for delete : ");
+        System.out.print("Enter your id for delete : ");
         int useridDelete = input.nextInt();
         
         String sql = "DELETE FROM emp WHERE id = '"+useridDelete+"'";
@@ -30,13 +30,13 @@ public class DeleteData {
             int status = stmt.executeUpdate(sql);
             
             if(status>0){
-                System.out.println("Successfull");
+                System.out.println("Delete Successfull");
             }else{
-                System.out.println("Unsuccessfull");
+                System.out.println("Data not found");
             }
         } catch (Exception e) {
+            System.out.println("Failed");
             System.out.println(e);
-            System.out.println("Successful");
         }
         
         
