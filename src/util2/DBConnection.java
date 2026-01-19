@@ -23,7 +23,10 @@ public class DBConnection {
         System.out.print("Enter your Address : ");
         String userAddress = sc.next();
         
-        String sql = "INSERT INTO emp (name,age,address)VALUES('"+userName+"', '"+userAge+"', '"+userAddress+"')";
+        System.out.print("Enter your Number : ");
+        int userContact = sc.nextInt();
+        
+        String sql = "INSERT INTO emp (name,age,address, number)VALUES('"+userName+"', '"+userAge+"', '"+userAddress+"', '"+userContact+"')";
      
         try {
             Class.forName("com.mysql.jdbc.Driver");

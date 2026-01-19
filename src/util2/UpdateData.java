@@ -24,7 +24,11 @@ public class UpdateData {
         System.out.print("Enter your Address: ");
         String UserAddressUpdate = input.next();
         
-        String sql = "UPDATE emp SET name = '"+UserNameUpdate+"', age = '"+UserAgeUpdate+"', address = '"+UserAddressUpdate+"' WHERE id = '"+UserIdUpdate+"'";
+        System.out.print("Enter your Number : ");
+        int userContact = input.nextInt();
+        
+        
+        String sql = "UPDATE emp SET name = '"+UserNameUpdate+"', age = '"+UserAgeUpdate+"', address = '"+UserAddressUpdate+"', number = '"+userContact+"' WHERE id = '"+UserIdUpdate+"'";
         
         try {
             
